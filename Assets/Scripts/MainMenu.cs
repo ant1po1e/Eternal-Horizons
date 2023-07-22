@@ -30,6 +30,7 @@ public class MainMenu : MonoBehaviour
 
     public async void StartGame()
     {
+        PlayButtonClickSound();
         Time.timeScale = 1;
         await Task.Delay(800);
         SceneManager.LoadScene(1);
@@ -38,31 +39,42 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
+        PlayButtonClickSound();
         optionPanel.SetActive(true);
     }
 
 
     public void OptionsClosed()
     {
+        PlayButtonClickSound();
         optionPanel.SetActive(false);
     }
 
 
     public void Credits()
     {
+        PlayButtonClickSound();
         creditsPanel.SetActive(true);
     }
 
 
     public void CreditsClosed()
     {
+        PlayButtonClickSound();
         creditsPanel.SetActive(false);
     }
 
 
     public void QuitGame()
     {
+        PlayButtonClickSound();
         Application.Quit();
         print("Game Closed");
+    }
+
+
+    public void PlayButtonClickSound()
+    {
+        SoundManager.instance.PlayAudio(SoundManager.instance.buttonUI);
     }
 }

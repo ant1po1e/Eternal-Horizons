@@ -30,13 +30,15 @@ public class PauseMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
         {
+            PlayButtonClickSound();
             Time.timeScale = 0;
             pauseMenu.SetActive(true);
             GUI.SetActive(false);
             isPaused = true;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
-        {   
+        {
+            PlayButtonClickSound();
             Time.timeScale = 1;
             pauseMenu.SetActive(false);
             GUI.SetActive(true);
@@ -46,17 +48,25 @@ public class PauseMenu : MonoBehaviour
 
     public void Options()
     {
+        PlayButtonClickSound();
         optionPanel.SetActive(true);
     }
 
 
     public void OptionsClosed()
     {
+        PlayButtonClickSound();
         optionPanel.SetActive(false);
     }
 
     public void GoToMainMenu()
     {
+        PlayButtonClickSound();
         SceneManager.LoadScene(0);
+    }
+
+    public void PlayButtonClickSound()
+    {
+        SoundManager.instance.PlayAudio(SoundManager.instance.buttonUI);
     }
 }

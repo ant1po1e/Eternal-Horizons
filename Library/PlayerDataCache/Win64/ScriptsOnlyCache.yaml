@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackgroundMusic
     - CameraController
     - CharacterCombat
     - CharacterStats
@@ -8,6 +9,7 @@ ScriptsOnlyBuild:
     - EnemyController
     - Equipment
     - EquipmentManager
+    - Experience
     - Interactable
     - Inventory
     - InventorySlot
@@ -16,14 +18,21 @@ ScriptsOnlyBuild:
     - MainMenu
     - PauseMenu
     - PlayerController
+    - PlayerHealth
     - PlayerManager
     - PlayerMotor
     - PlayerStats
+    - SoundManager
     - Teleporter
     - UnityEngine.PostProcessing.PostProcessingBehaviour
     - UnityEngine.PostProcessing.PostProcessingProfile
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -42,6 +51,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/MainMenu.unity:
@@ -61,26 +71,42 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 72
       Script: {instanceID: 0}
-    - Class: 81
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11422}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11660}
     - Class: 114
-      Script: {instanceID: 12220}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12242}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 13580}
+      Script: {instanceID: 12322}
     - Class: 114
-      Script: {instanceID: 14112}
+      Script: {instanceID: 12902}
+    - Class: 114
+      Script: {instanceID: 13242}
+    - Class: 114
+      Script: {instanceID: 13260}
+    - Class: 114
+      Script: {instanceID: 13614}
+    - Class: 114
+      Script: {instanceID: 13848}
+    - Class: 114
+      Script: {instanceID: 14146}
+    - Class: 114
+      Script: {instanceID: 14198}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -124,6 +150,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -135,61 +165,71 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11422}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11550}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11660}
     - Class: 114
-      Script: {instanceID: 11646}
+      Script: {instanceID: 11672}
     - Class: 114
-      Script: {instanceID: 11658}
+      Script: {instanceID: 11684}
     - Class: 114
-      Script: {instanceID: 11776}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 11806}
+      Script: {instanceID: 11804}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12152}
+      Script: {instanceID: 11932}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12232}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12242}
+      Script: {instanceID: 12234}
     - Class: 114
-      Script: {instanceID: 12348}
+      Script: {instanceID: 12262}
     - Class: 114
-      Script: {instanceID: 12414}
+      Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 12378}
     - Class: 114
-      Script: {instanceID: 13108}
+      Script: {instanceID: 12444}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 12466}
     - Class: 114
-      Script: {instanceID: 13566}
+      Script: {instanceID: 12902}
     - Class: 114
-      Script: {instanceID: 13580}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13628}
+      Script: {instanceID: 13360}
     - Class: 114
-      Script: {instanceID: 13804}
+      Script: {instanceID: 13432}
     - Class: 114
-      Script: {instanceID: 13858}
+      Script: {instanceID: 13600}
     - Class: 114
-      Script: {instanceID: 13868}
+      Script: {instanceID: 13614}
     - Class: 114
-      Script: {instanceID: 13924}
+      Script: {instanceID: 13662}
     - Class: 114
-      Script: {instanceID: 14000}
+      Script: {instanceID: 13838}
     - Class: 114
-      Script: {instanceID: 14112}
+      Script: {instanceID: 13892}
     - Class: 114
-      Script: {instanceID: 14136}
+      Script: {instanceID: 13902}
+    - Class: 114
+      Script: {instanceID: 13958}
+    - Class: 114
+      Script: {instanceID: 14034}
+    - Class: 114
+      Script: {instanceID: 14146}
+    - Class: 114
+      Script: {instanceID: 14170}
+    - Class: 114
+      Script: {instanceID: 14198}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -329,6 +369,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 32233f127d8f7e5c87d4157700132c98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
+  - hash:
+      serializedVersion: 2
       Hash: 234d407605354852c48e57df17c9a1c6
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -407,6 +453,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 6248d67a69903a38dbbf8268a90973cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHealth
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -455,7 +507,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 159814baec7f12a89949cd2c17a69e50
+      Hash: aaa8d742fe721466ac5d4a9da69c5931
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyStats
@@ -485,10 +537,16 @@ ScriptsOnlyBuild:
     className: EnemyController
   - hash:
       serializedVersion: 2
-      Hash: 159814baec7f12a89949cd2c17a69e50
+      Hash: aaa8d742fe721466ac5d4a9da69c5931
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerStats
+  - hash:
+      serializedVersion: 2
+      Hash: c0464f20b79586bc9a5aa9a633decfa1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Experience
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -608,6 +666,12 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: BackgroundMusic
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: PlayerMotor
   - hash:
       serializedVersion: 2
@@ -641,7 +705,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 159814baec7f12a89949cd2c17a69e50
+      Hash: aaa8d742fe721466ac5d4a9da69c5931
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterStats

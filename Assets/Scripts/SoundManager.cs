@@ -5,12 +5,30 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
-  [SerializeField] Slider volumeSlider;
-  
+    [Header("Volume Slider")]
+    [SerializeField] 
+    Slider volumeSlider;
+
+    
+    public AudioSource playerHit, enemyDead, gems, heal, lvlUp, buttonUI, gameOver;
+
+    #region Singleton
+    public static SoundManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+    #endregion
+
+
     // Start is called before the first frame update
     void Start()
     {
-        if(!PlayerPrefs.HasKey("musicVolume"))
+        if (!PlayerPrefs.HasKey("musicVolume"))
         {
             PlayerPrefs.SetFloat("musicVolume", 1);
         }
@@ -37,5 +55,8 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
     }
 
+    public void PlayAudio(AudioSource audio)
+    {
+        audio.Play();
+    }
 }
-
